@@ -1,16 +1,16 @@
 export default function Stats() {
   const logos = [
-    { name: 'Linear', font: 'font-semibold tracking-wider text-gray-700' },
-    { name: 'Raycast', font: 'font-extrabold tracking-wide text-gray-800' },
-    { name: 'Retool', font: 'font-bold tracking-normal text-gray-700' },
-    { name: 'Ramp', font: 'font-bold tracking-tight text-gray-800' },
-    { name: 'Vercel', font: 'font-bold tracking-wider text-gray-700' },
+    { name: 'Layers', font: 'font-semibold tracking-wider text-gray-700' },
+    { name: 'Quotient', font: 'font-extrabold tracking-wide text-gray-800' },
+    { name: 'circolles', font: 'font-bold tracking-normal text-gray-700' },
+    { name: 'Sisyphus', font: 'font-bold tracking-tight text-gray-800' },
+    { name: 'Catalog', font: 'font-bold tracking-wider text-gray-700' },
   ]
 
   const stats = [
-    { value: '10,000+', label: 'Active users', sub: 'Across 60+ countries' },
-    { value: '500,000+', label: 'Hours tracked', sub: '99.9% uptime guaranteed' },
-    { value: '2,500+', label: 'Teams onboarded', sub: 'Startups to enterprise' },
+    { value: '10,000+', label: 'Professionals', sub: '' },
+    { value: '500,000+', label: 'Hours tracked', sub: '' },
+    { value: '2,500+', label: 'Projects managed', sub: '' },
   ]
 
   return (
@@ -19,7 +19,7 @@ export default function Stats() {
         {/* Logos Bar */}
         <div className="mb-12 text-center">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">
-            TRUSTED BY FAST-GROWING TEAMS ACROSS THE GLOBE
+            Trusted by teams that value their time.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 lg:gap-20 opacity-60 hover:opacity-100 transition-opacity duration-300">
             {logos.map((logo) => (

@@ -5,7 +5,7 @@ export default function Steps() {
     {
       num: '01',
       title: 'Start Your Timer',
-      desc: 'Click start or let Timeflow detect your active windows and categorize projects automatically without friction.',
+      desc: 'Select a project and start tracking your working hours.',
       preview: (
         <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs space-y-2 mt-6">
           <div className="flex items-center justify-between text-xs">
@@ -27,7 +27,7 @@ export default function Steps() {
     {
       num: '02',
       title: 'Manage Your Work',
-      desc: 'Assign time entries to projects, clients, and custom tags with one click. Keep team timelines synchronized.',
+      desc: "Organize tasks, manage projects, and monitor your team’s activities.",
       preview: (
         <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs space-y-2.5 mt-6">
           <div className="flex items-center justify-between text-xs">
@@ -47,7 +47,7 @@ export default function Steps() {
     {
       num: '03',
       title: 'Understand Your Progress',
-      desc: 'Generate automated client invoices, profitability reports, and export clean, audit-ready timesheets in seconds.',
+      desc: 'Generate reports and discover valuable insights into your productivity.',
       preview: (
         <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs space-y-2 mt-6">
           <div className="flex items-center justify-between text-xs">
@@ -69,13 +69,13 @@ export default function Steps() {
   ]
 
   return (
-    <section id="how-it-works" className="py-20 lg:py-28 bg-white border-b border-gray-100">
+    <section id="how-it-works" className="steps-section py-20 lg:py-24 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-16">
           <div className="lg:col-span-7">
             <span className="text-xs font-bold text-primary-600 tracking-wider uppercase mb-3 block">
-              HOW IT WORKS
+              A SIMPLE RHYTHM
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-tight">
               From tracking to insights<br />in three simple steps.
@@ -83,7 +83,7 @@ export default function Steps() {
           </div>
           <div className="lg:col-span-5">
             <p className="text-base sm:text-lg text-gray-500 leading-relaxed">
-              Get up and running in minutes. No complex configuration, no intrusive employee surveillance, just effortless productivity.
+              Less setup. More momentum.
             </p>
           </div>
         </div>

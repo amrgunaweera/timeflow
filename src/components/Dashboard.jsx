@@ -79,7 +79,7 @@ export default function Dashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-10">
           <div className="lg:col-span-7">
             <span className="text-xs font-bold text-primary-400 tracking-wider uppercase mb-3 block">
-              CENTRALIZED WORKSPACE
+              THE BIG PICTURE. EVERY LITTLE DETAIL.
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
               Your entire workflow.<br />One simple dashboard.
@@ -87,7 +87,7 @@ export default function Dashboard() {
           </div>
           <div className="lg:col-span-5">
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Consolidate timers, sprint milestones, team capacity, and automated invoicing into a single synchronized command center.
+              Know what&apos;s moving. See what matters. Keep your team in flow, without the follow-ups.
             </p>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function Dashboard() {
         {/* Tab Pills */}
         <div className="flex items-center gap-2 mb-8 bg-white/5 p-1.5 rounded-2xl w-fit border border-white/10 backdrop-blur-md">
           {[
-            { id: 'projects', label: 'Projects' },
+            { id: 'projects', label: 'Overview' },
             { id: 'timesheets', label: 'Timesheets' },
             { id: 'reports', label: 'Reports' },
           ].map((tab) => (
@@ -114,7 +114,7 @@ export default function Dashboard() {
         </div>
 
         {/* Big Dark Dashboard Mockup Card */}
-        <div className="bg-[#131B2E]/95 rounded-3xl border border-white/10 p-3 sm:p-6 shadow-2xl backdrop-blur-xl mb-16">
+        <div className="dashboard-window bg-white rounded-3xl border border-white/10 p-3 sm:p-6 shadow-2xl backdrop-blur-xl mb-16">
           {/* Top Window Bar inside dark card */}
           <div className="flex items-center justify-between px-3 py-2 border-b border-white/10 mb-4">
             <div className="flex items-center gap-2">
@@ -184,7 +184,7 @@ export default function Dashboard() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div>
                   <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
-                    A bit more focus. A lot of progress.
+                    A little focus. A lot of progress.
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-400 mt-0.5">
                     Here&apos;s what your team achieved this week

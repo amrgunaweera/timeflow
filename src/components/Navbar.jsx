@@ -21,21 +21,22 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Product</a>
+          <a href="#features" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Product⌄</a>
+            <a href="#features" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Solutions⌄</a>
             <a href="#features" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Features</a>
             <a href="#dashboard" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Pricing</a>
-            <a href="#benefits" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">About</a>
+            <a href="#benefits" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Pricing</a>
             <a href="#testimonials" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Resources</a>
-            <a href="#cta" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Blog</a>
           </div>
 
           {/* Desktop Right CTA */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-10">
+            <a href="#cta" className="text-sm font-semibold text-gray-700">Log in</a>
             <a
               href="#cta"
               className="bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md shadow-primary-600/20 hover:shadow-lg hover:shadow-primary-600/30 transition-all duration-200"
             >
-              Start free trial
+              Start Free Trial
             </a>
           </div>
 

@@ -49,16 +49,14 @@ export default function DashboardPreview() {
   ]
 
   const categories = [
-    { name: 'Product Design', hrs: '18h 40m', pct: 78, color: 'bg-primary-600' },
-    { name: 'Web Development', hrs: '12h 15m', pct: 62, color: 'bg-indigo-500' },
-    { name: 'Client Alignment', hrs: '4h 30m', pct: 35, color: 'bg-violet-400' },
-    { name: 'Internal Reviews', hrs: '2h 15m', pct: 18, color: 'bg-primary-300' },
+    { name: 'Website redesign', hrs: '14h 20m', pct: 75, color: 'bg-primary-600' },
+    { name: 'Brand strategy', hrs: '10h 45m', pct: 55, color: 'bg-indigo-500' },
+    { name: 'Mobile app', hrs: '7h 35m', pct: 39, color: 'bg-violet-400' },
   ]
 
   const recentActivities = [
-    { task: 'Landing page redesign', project: 'Acme Studio', time: '2h 45m', status: 'Billable' },
-    { task: 'Design System components', project: 'Timeflow UI', time: '3h 10m', status: 'Billable' },
-    { task: 'Sprint retrospective', project: 'Internal', time: '1h 00m', status: 'Internal' },
+    { task: 'Homepage exploration', project: 'Website redesign', time: '02:15:00', status: 'Billable' },
+    { task: 'Weekly planning', project: 'Internal', time: '00:45:00', status: 'Billable' },
   ]
 
   const team = [
@@ -69,7 +67,7 @@ export default function DashboardPreview() {
   ]
 
   return (
-    <div className="relative mx-auto w-full rounded-2xl md:rounded-3xl bg-white p-2.5 sm:p-5 shadow-[0_25px_80px_-15px_rgba(79,70,229,0.16)] border border-gray-200/90">
+    <div className="hero-preview relative mx-auto w-full rounded-2xl md:rounded-3xl bg-white p-2.5 sm:p-5 shadow-[0_25px_80px_-15px_rgba(79,70,229,0.16)] border border-gray-200/90">
       {/* Top Window Bar */}
       <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100 mb-4">
         <div className="flex items-center gap-2">
@@ -105,18 +103,17 @@ export default function DashboardPreview() {
               </div>
               <div>
                 <p className="text-xs font-bold text-gray-900 leading-tight">Timeflow</p>
-                <p className="text-[10px] text-gray-400 leading-tight">Design Team</p>
+                <p className="text-[10px] text-gray-400 leading-tight">Studio workspace</p>
               </div>
             </div>
 
             <nav className="space-y-1">
               {[
                 { name: 'Overview', icon: LayoutDashboard, active: true },
-                { name: 'Timers', icon: Timer, active: false },
+                { name: 'Time tracker', icon: Timer, active: false },
                 { name: 'Projects', icon: FolderKanban, active: false },
                 { name: 'Team', icon: Users, active: false },
                 { name: 'Reports', icon: BarChart3, active: false },
-                { name: 'Settings', icon: Settings, active: false },
               ].map((item) => (
                 <button
                   key={item.name}
@@ -136,9 +133,9 @@ export default function DashboardPreview() {
           <div className="p-3 bg-primary-50/70 rounded-xl border border-primary-100">
             <div className="flex items-center gap-1.5 text-primary-700 text-[11px] font-bold mb-1">
               <Sparkles size={13} />
-              <span>Pro Plan</span>
+              <span>Good work takes time.</span>
             </div>
-            <p className="text-[11px] text-gray-500 leading-snug">Synced across 12 team members.</p>
+            <p className="text-[11px] text-gray-500 leading-snug">Make room for more.</p>
           </div>
         </aside>
 
@@ -148,15 +145,15 @@ export default function DashboardPreview() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
               <h3 className="text-xl sm:text-2xl font-extrabold text-gray-950 tracking-tight">
-                A bit more focus. A lot of progress.
+                A little focus. A lot of progress.
               </h3>
               <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
-                Here&apos;s what your team achieved this week
+                Here&apos;s how your team is spending their time today.
               </p>
             </div>
             <div className="flex items-center gap-2">
               <button className="flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-3 py-1.5 text-xs font-semibold text-gray-700 shadow-2xs hover:bg-gray-50">
-                <span>Oct 12 - Oct 18</span>
+                <span>This week</span>
                 <ChevronDown size={14} className="text-gray-400" />
               </button>
             </div>
@@ -166,8 +163,8 @@ export default function DashboardPreview() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
             {/* Metric 1 */}
             <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs">
-              <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Total Time</span>
-              <p className="text-xl sm:text-2xl font-extrabold text-gray-950 mt-1">37h 40m</p>
+              <span className="text-[11px] font-semibold text-gray-400 tracking-wider">Tracked this week</span>
+              <p className="text-xl sm:text-2xl font-extrabold text-gray-950 mt-1">32h 40m</p>
               <div className="flex items-center gap-1 mt-1 text-[11px] font-medium text-emerald-600">
                 <ArrowUpRight size={12} />
                 <span>+12% vs last week</span>
@@ -176,8 +173,8 @@ export default function DashboardPreview() {
 
             {/* Metric 2 */}
             <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs">
-              <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Billable Time</span>
-              <p className="text-xl sm:text-2xl font-extrabold text-gray-950 mt-1">28h 15m</p>
+              <span className="text-[11px] font-semibold text-gray-400 tracking-wider">Billable hours</span>
+              <p className="text-xl sm:text-2xl font-extrabold text-gray-950 mt-1">26h 15m</p>
               <div className="flex items-center gap-1 mt-1 text-[11px] font-medium text-primary-600">
                 <span>82% of total hours</span>
               </div>
@@ -185,7 +182,7 @@ export default function DashboardPreview() {
 
             {/* Metric 3 */}
             <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs">
-              <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Productivity</span>
+              <span className="text-[11px] font-semibold text-gray-400 tracking-wider">Project progress</span>
               <p className="text-xl sm:text-2xl font-extrabold text-gray-950 mt-1">74%</p>
               <div className="flex items-center gap-1 mt-1 text-[11px] font-medium text-emerald-600">
                 <ArrowUpRight size={12} />
@@ -197,21 +194,20 @@ export default function DashboardPreview() {
             <div className="bg-primary-600 rounded-2xl p-4 text-white shadow-lg shadow-primary-600/25 relative overflow-hidden flex flex-col justify-between">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-medium text-primary-100 uppercase tracking-wider">
-                  Total Revenue
+                  ● TIMER RUNNING
                 </span>
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
                   className="w-7 h-7 rounded-full bg-white text-primary-600 hover:bg-primary-50 flex items-center justify-center shadow-sm transition-all cursor-pointer"
                   title={isPlaying ? 'Pause' : 'Resume'}
                 >
-                  {isPlaying ? <Pause size={12} fill="currentColor" /> : <Play size={12} fill="currentColor" />}
+                  {isPlaying ? <span className="block w-2.5 h-2.5 rounded-[2px] bg-primary-600" /> : <Play size={12} fill="currentColor" />}
                 </button>
               </div>
               <div>
-                <p className="text-xl sm:text-2xl font-extrabold tracking-tight">$15,450.00</p>
-                <div className="flex items-center justify-between mt-1 text-[11px] text-primary-100">
-                  <span className="font-mono">{formatTimer(seconds)}</span>
-                  <span className="text-primary-200">Active</span>
+                <p className="text-2xl sm:text-3xl font-extrabold tracking-tight">{formatTimer(seconds)}</p>
+                <div className="flex items-center justify-between mt-1 text-[10px] text-primary-100">
+                  <span>Website redesign · Design</span>
                 </div>
               </div>
             </div>
@@ -223,8 +219,8 @@ export default function DashboardPreview() {
             <div className="lg:col-span-2 bg-white rounded-2xl p-5 border border-gray-200/80 shadow-2xs">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-gray-900">Weekly Overview</h4>
-                  <p className="text-[11px] text-gray-400">Hours tracked per day</p>
+                  <h4 className="text-xs sm:text-sm font-bold text-gray-900">Your week, at a glance</h4>
+                  <p className="text-[11px] text-gray-400">Tracked hours</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="flex items-center gap-1.5">
@@ -233,7 +229,7 @@ export default function DashboardPreview() {
                   </div>
                   <div className="flex items-center gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-primary-200"></span>
-                    <span className="text-[11px] text-gray-500 font-medium">Internal</span>
+                    <span className="text-[11px] text-gray-500 font-medium">Non-billable</span>
                   </div>
                 </div>
               </div>
@@ -270,8 +266,7 @@ export default function DashboardPreview() {
             <div className="bg-white rounded-2xl p-5 border border-gray-200/80 shadow-2xs flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-xs sm:text-sm font-bold text-gray-900">Time by Category</h4>
-                  <span className="text-[11px] font-semibold text-primary-600 cursor-pointer hover:underline">Details</span>
+                  <h4 className="text-xs sm:text-sm font-bold text-gray-900">Where your time goes</h4>
                 </div>
 
                 <div className="space-y-3.5">

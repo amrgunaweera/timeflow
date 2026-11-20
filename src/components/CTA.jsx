@@ -13,13 +13,13 @@ export default function CTA() {
             {/* Left Content */}
             <div className="lg:col-span-8 space-y-4">
               <span className="inline-block text-xs font-bold text-primary-200 uppercase tracking-widest">
-                START YOUR 14-DAY FREE TRIAL
+                YOUR NEXT GREAT WORKDAY STARTS HERE
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
                 Ready to take control<br />of your time?
               </h2>
               <p className="text-base sm:text-lg text-primary-100 max-w-xl leading-relaxed">
-                Join thousands of teams already using Timeflow to track time, manage projects, and grow their business.
+                Start tracking smarter today. Discover how much more your team can achieve with TimeFlow.
               </p>
             </div>
 
@@ -31,7 +31,7 @@ export default function CTA() {
               </button>
 
               <button className="bg-white/10 hover:bg-white/15 text-white font-semibold text-base px-6 py-3.5 rounded-xl border border-white/20 transition-all duration-200 text-center cursor-pointer">
-                Schedule a demo
+                Explore Pricing ↗
               </button>
 
               <p className="text-[11px] text-center text-primary-200 mt-1">

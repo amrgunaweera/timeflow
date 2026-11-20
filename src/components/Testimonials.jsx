@@ -4,37 +4,37 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "We used to lose at least 15% of our billable hours to sloppy manual timesheets. With Timeflow, our agency billed an extra $34,000 in the first two months alone.",
-      name: 'Sarah Chen',
-      role: 'VP of Operations, TechVault',
+        "We used to piece together hours at the end of the week. Now it’s just part of how we work. Invoicing feels a lot less like guesswork.",
+      name: 'Maya Chen',
+      role: 'Founder · Layers Studio',
       avatar: 'SC',
       color: 'bg-primary-600',
     },
     {
       quote:
-        "The project budget tracking is a lifesaver. We can see burn rates in real time before milestones get out of hand. It's now the first app our project managers open every morning.",
-      name: 'Marcus Johnson',
-      role: 'Lead Architect, DesignCraft',
+        "The project view helps us catch a busy week before it becomes an overloaded team. It’s clear enough that everyone actually uses it.",
+      name: 'Daniel Brooks',
+      role: 'Operations Lead · Quotient',
       avatar: 'MJ',
       color: 'bg-indigo-600',
     },
     {
       quote:
-        "Switching our 45-person remote engineering team to Timeflow took less than an afternoon. Adoption was 100% within 48 hours because it doesn't get in anyone's way.",
-      name: 'Emily Rodriguez',
-      role: 'Head of People, FinStack',
+        "I finally know how long the small things take. That has made my estimates more realistic—and made it easier to switch off at the end of the day.",
+      name: 'Sofia Martinez',
+      role: 'Independent Brand Designer',
       avatar: 'ER',
       color: 'bg-emerald-600',
     },
   ]
 
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-[#FCFCFD]">
+    <section id="testimonials" className="testimonials-section py-20 lg:py-28 bg-[#FCFCFD]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-left mb-16 max-w-2xl">
           <span className="text-xs font-bold text-primary-600 tracking-wider uppercase mb-3 block">
-            TESTIMONIALS
+            LESS GUESSWORK. MORE GOOD WORK.
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight leading-tight">
             Teams love having their<br />time under control.
@@ -56,7 +56,7 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-sm sm:text-base text-gray-700 leading-relaxed italic mb-8">
+                <p className="text-sm sm:text-base text-gray-700 leading-relaxed not-italic mb-8">
                   &ldquo;{t.quote}&rdquo;
                 </p>
               </div>

@@ -2,19 +2,19 @@ export default function Footer() {
   const footerSections = [
     {
       title: 'Product',
-      links: ['Features', 'Automatic Tracking', 'Timesheets', 'Integrations', 'Pricing', 'Changelog'],
+      links: ['Time tracking', 'Projects', 'Team management', 'Reports', 'Pricing'],
     },
     {
-      title: 'Company',
-      links: ['About Us', 'Careers', 'Press Kit', 'Contact', 'Partners', 'Security'],
+      title: 'Solutions',
+      links: ['Freelancers', 'Agencies', 'Remote teams', 'Consultants'],
     },
     {
       title: 'Resources',
-      links: ['Blog', 'Documentation', 'Time Tracking Guide', 'Community', 'System Status', 'API Docs'],
+      links: ['Help center', 'Guides', 'Templates', 'Product updates'],
     },
     {
-      title: 'Legal',
-      links: ['Privacy Policy', 'Terms of Service', 'Security', 'Compliance'],
+      title: 'Company',
+      links: ['About us', 'Contact', 'Careers'],
     },
   ]
 
@@ -35,12 +35,9 @@ export default function Footer() {
               <span className="text-xl font-bold tracking-tight text-gray-950">Timeflow</span>
             </a>
             <p className="text-sm text-gray-500 leading-relaxed max-w-sm">
-              Track time, manage projects, and boost your team&apos;s productivity without interrupting your flow.
+              A little structure. A lot more flow.<br/>Time tracking for work that matters.
             </p>
-            <div className="flex items-center gap-2 text-xs text-gray-400">
-              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-              <span>All systems operational</span>
-            </div>
+            <a className="text-xs font-semibold text-primary-600" href="mailto:hello@timeflow.example">hello@timeflow.example</a>
           </div>
 
           {/* Links Columns */}
@@ -62,12 +59,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-          <p>© {new Date().getFullYear()} Timeflow Technologies Inc. All rights reserved.</p>
+          <p>© 2026 TimeFlow. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-gray-600 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gray-600 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-gray-600 transition-colors">Security</a>
           </div>
         </div>
       </div>

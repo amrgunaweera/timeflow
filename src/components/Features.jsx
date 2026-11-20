@@ -29,13 +29,13 @@ export default function Features() {
   ]
 
   return (
-    <section id="features" className="py-20 lg:py-28 bg-[#FCFCFD]">
+    <section id="features" className="features-section py-20 lg:py-24 bg-[#f7f9fc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end mb-16">
           <div className="lg:col-span-7">
             <span className="text-xs font-bold text-primary-600 tracking-wider uppercase mb-3 block">
-              FEATURES &amp; CAPABILITIES
+              BUILT FOR THE WAY YOU WORK
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-950 tracking-tight">
               Everything you need<br />to work smarter.
@@ -43,7 +43,7 @@ export default function Features() {
           </div>
           <div className="lg:col-span-5">
             <p className="text-base sm:text-lg text-gray-500 leading-relaxed">
-              Powerful features engineered to eliminate tedious timesheet entry, prevent missed billable hours, and give leadership real-time clarity.
+              Powerful tools to help you understand your time, manage your projects, and get more done.
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function Features() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Smart Time Tracking</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                One-click timers, automatic idle detection, and background application logging that captures work without breaking your focus.
+                Track working hours with a simple timer or manual time entries. Never lose track of billable hours.
               </p>
             </div>
 
@@ -102,7 +102,7 @@ export default function Features() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Project Management</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                Organize projects, assign tasks, monitor milestone deadlines, and track real-time budget consumption against fixed fee caps.
+                Organize tasks, track project progress, and understand how time is spent across different projects.
               </p>
             </div>
 
@@ -132,7 +132,7 @@ export default function Features() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Team Management</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                Gain instant visibility into team capacity, prevent developer burnout, and optimize billable allocation across distributed members.
+                Manage your team, monitor working hours, and get a clear overview of everyone&apos;s workload.
               </p>
             </div>
 
@@ -168,7 +168,7 @@ export default function Features() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Actionable Insights</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                Granular reports that highlight profitable clients, pinpoint operational bottlenecks, and export clean PDF audit trails.
+                Turn tracked hours into meaningful insights with detailed reports, timesheets, and productivity analytics.
               </p>
             </div>
 
