@@ -5,7 +5,6 @@ import {
   FolderKanban,
   Users,
   BarChart3,
-  Settings,
   Play,
   Pause,
   ChevronDown,
@@ -14,7 +13,6 @@ import {
   Bell,
   ArrowUpRight,
   CheckCircle2,
-  MoreHorizontal
 } from 'lucide-react'
 
 export default function DashboardPreview() {
@@ -67,9 +65,9 @@ export default function DashboardPreview() {
   ]
 
   return (
-    <div className="hero-preview relative mx-auto w-full rounded-2xl md:rounded-3xl bg-white p-2.5 sm:p-5 shadow-[0_25px_80px_-15px_rgba(79,70,229,0.16)] border border-gray-200/90">
+    <div className="relative mx-auto w-full rounded-2xl md:rounded-3xl bg-white shadow-[0_25px_80px_-15px_rgba(79,70,229,0.15)] border border-gray-200/90 overflow-hidden">
       {/* Top Window Bar */}
-      <div className="flex items-center justify-between px-3 py-2 border-b border-gray-100 mb-4">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-gray-100 bg-white">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
           <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
@@ -90,7 +88,7 @@ export default function DashboardPreview() {
       </div>
 
       {/* Main Workspace Frame */}
-      <div className="flex flex-col lg:flex-row bg-[#FAFAFC] rounded-xl lg:rounded-2xl border border-gray-100 overflow-hidden">
+      <div className="flex flex-col lg:flex-row bg-[#FAFAFC]">
         {/* Left App Sidebar */}
         <aside className="hidden lg:flex w-52 flex-col justify-between border-r border-gray-100 bg-white p-4">
           <div>
@@ -102,7 +100,7 @@ export default function DashboardPreview() {
                 </svg>
               </div>
               <div>
-                <p className="text-xs font-bold text-gray-900 leading-tight">Timeflow</p>
+                <p className="text-xs font-bold text-[#192852] leading-tight">Timeflow</p>
                 <p className="text-[10px] text-gray-400 leading-tight">Studio workspace</p>
               </div>
             </div>
@@ -140,11 +138,11 @@ export default function DashboardPreview() {
         </aside>
 
         {/* Center Workspace Content */}
-        <div className="flex-1 p-4 sm:p-6 lg:p-7 space-y-5">
+        <div className="flex-1 p-5 sm:p-6 lg:p-7 space-y-5">
           {/* Dashboard Header Bar */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-950 tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-[#192852] tracking-tight">
                 A little focus. A lot of progress.
               </h3>
               <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
@@ -164,7 +162,7 @@ export default function DashboardPreview() {
             {/* Metric 1 */}
             <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs">
               <span className="text-[11px] font-semibold text-gray-400 tracking-wider">Tracked this week</span>
-              <p className="text-xl sm:text-2xl font-extrabold text-gray-950 mt-1">32h 40m</p>
+              <p className="text-xl sm:text-2xl font-extrabold text-[#192852] mt-1">32h 40m</p>
               <div className="flex items-center gap-1 mt-1 text-[11px] font-medium text-emerald-600">
                 <ArrowUpRight size={12} />
                 <span>+12% vs last week</span>
@@ -174,7 +172,7 @@ export default function DashboardPreview() {
             {/* Metric 2 */}
             <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs">
               <span className="text-[11px] font-semibold text-gray-400 tracking-wider">Billable hours</span>
-              <p className="text-xl sm:text-2xl font-extrabold text-gray-950 mt-1">26h 15m</p>
+              <p className="text-xl sm:text-2xl font-extrabold text-[#192852] mt-1">26h 15m</p>
               <div className="flex items-center gap-1 mt-1 text-[11px] font-medium text-primary-600">
                 <span>82% of total hours</span>
               </div>
@@ -183,14 +181,14 @@ export default function DashboardPreview() {
             {/* Metric 3 */}
             <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs">
               <span className="text-[11px] font-semibold text-gray-400 tracking-wider">Project progress</span>
-              <p className="text-xl sm:text-2xl font-extrabold text-gray-950 mt-1">74%</p>
+              <p className="text-xl sm:text-2xl font-extrabold text-[#192852] mt-1">74%</p>
               <div className="flex items-center gap-1 mt-1 text-[11px] font-medium text-emerald-600">
                 <ArrowUpRight size={12} />
                 <span>+4% this week</span>
               </div>
             </div>
 
-            {/* Metric 4: Solid Purple Revenue / Timer Card with White Action Button */}
+            {/* Metric 4: Solid Purple Timer Card */}
             <div className="bg-primary-600 rounded-2xl p-4 text-white shadow-lg shadow-primary-600/25 relative overflow-hidden flex flex-col justify-between">
               <div className="flex items-center justify-between">
                 <span className="text-[11px] font-medium text-primary-100 uppercase tracking-wider">
@@ -204,7 +202,7 @@ export default function DashboardPreview() {
                   {isPlaying ? <span className="block w-2.5 h-2.5 rounded-[2px] bg-primary-600" /> : <Play size={12} fill="currentColor" />}
                 </button>
               </div>
-              <div>
+              <div className="mt-2">
                 <p className="text-2xl sm:text-3xl font-extrabold tracking-tight">{formatTimer(seconds)}</p>
                 <div className="flex items-center justify-between mt-1 text-[10px] text-primary-100">
                   <span>Website redesign · Design</span>
@@ -219,7 +217,7 @@ export default function DashboardPreview() {
             <div className="lg:col-span-2 bg-white rounded-2xl p-5 border border-gray-200/80 shadow-2xs">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-gray-900">Your week, at a glance</h4>
+                  <h4 className="text-xs sm:text-sm font-bold text-[#192852]">Your week, at a glance</h4>
                   <p className="text-[11px] text-gray-400">Tracked hours</p>
                 </div>
                 <div className="flex items-center gap-3">
@@ -266,7 +264,7 @@ export default function DashboardPreview() {
             <div className="bg-white rounded-2xl p-5 border border-gray-200/80 shadow-2xs flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-xs sm:text-sm font-bold text-gray-900">Where your time goes</h4>
+                  <h4 className="text-xs sm:text-sm font-bold text-[#192852]">Where your time goes</h4>
                 </div>
 
                 <div className="space-y-3.5">
@@ -274,7 +272,7 @@ export default function DashboardPreview() {
                     <div key={cat.name} className="space-y-1">
                       <div className="flex items-center justify-between text-xs">
                         <span className="font-medium text-gray-700">{cat.name}</span>
-                        <span className="font-bold text-gray-900">{cat.hrs}</span>
+                        <span className="font-bold text-[#192852]">{cat.hrs}</span>
                       </div>
                       <div className="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
                         <div
@@ -289,7 +287,7 @@ export default function DashboardPreview() {
 
               <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
                 <span className="text-gray-400">Client Invoiced</span>
-                <span className="font-extrabold text-gray-900">$12,850.00</span>
+                <span className="font-extrabold text-[#192852]">$12,850.00</span>
               </div>
             </div>
           </div>
@@ -299,7 +297,7 @@ export default function DashboardPreview() {
             {/* Recent Activity List */}
             <div className="lg:col-span-2 bg-white rounded-2xl p-4 sm:p-5 border border-gray-200/80 shadow-2xs">
               <div className="flex items-center justify-between mb-3">
-                <h4 className="text-xs sm:text-sm font-bold text-gray-900">Recent Timesheet Entries</h4>
+                <h4 className="text-xs sm:text-sm font-bold text-[#192852]">Recent Timesheet Entries</h4>
                 <span className="text-[11px] font-semibold text-primary-600 cursor-pointer hover:underline">View All</span>
               </div>
               <div className="divide-y divide-gray-100">
@@ -311,11 +309,7 @@ export default function DashboardPreview() {
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="font-mono font-semibold text-gray-800">{act.time}</span>
-                      <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
-                        act.status === 'Billable'
-                          ? 'bg-emerald-50 text-emerald-700 border border-emerald-200/60'
-                          : 'bg-gray-100 text-gray-600'
-                      }`}>
+                      <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">
                         {act.status}
                       </span>
                     </div>
@@ -327,7 +321,7 @@ export default function DashboardPreview() {
             {/* Team Members Status */}
             <div className="bg-white rounded-2xl p-4 sm:p-5 border border-gray-200/80 shadow-2xs">
               <div className="flex items-center justify-between mb-3">
-                <h4 className="text-xs sm:text-sm font-bold text-gray-900">Team Status</h4>
+                <h4 className="text-xs sm:text-sm font-bold text-[#192852]">Team Status</h4>
                 <span className="text-[11px] text-emerald-600 font-semibold">4 active now</span>
               </div>
               <div className="space-y-3">
@@ -339,7 +333,7 @@ export default function DashboardPreview() {
                       </div>
                       <span className="font-medium text-gray-800">{member.name}</span>
                     </div>
-                    <span className="font-bold text-gray-900">{member.hrs}</span>
+                    <span className="font-bold text-[#192852]">{member.hrs}</span>
                   </div>
                 ))}
               </div>

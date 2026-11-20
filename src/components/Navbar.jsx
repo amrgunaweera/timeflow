@@ -20,23 +20,32 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
-          <a href="#features" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Product⌄</a>
-            <a href="#features" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Solutions⌄</a>
+          <div className="hidden md:flex items-center gap-7 lg:gap-8">
+            <a href="#features" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors flex items-center gap-1">
+              <span>Product</span>
+              <svg width="9" height="5" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </a>
+            <a href="#how-it-works" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors flex items-center gap-1">
+              <span>Solutions</span>
+              <svg width="9" height="5" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </a>
             <a href="#features" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Features</a>
             <a href="#dashboard" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Pricing</a>
-            <a href="#benefits" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Pricing</a>
-            <a href="#testimonials" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Resources</a>
+            <a href="#testimonials" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors flex items-center gap-1">
+              <span>Resources</span>
+              <svg width="9" height="5" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </a>
+            <a href="#cta" className="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Blog</a>
           </div>
 
           {/* Desktop Right CTA */}
-          <div className="hidden md:flex items-center gap-10">
-            <a href="#cta" className="text-sm font-semibold text-gray-700">Log in</a>
+          <div className="hidden md:flex items-center gap-6">
+            <a href="#cta" className="text-sm font-semibold text-gray-700 hover:text-gray-950 transition-colors">Log in</a>
             <a
               href="#cta"
               className="bg-primary-600 hover:bg-primary-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md shadow-primary-600/20 hover:shadow-lg hover:shadow-primary-600/30 transition-all duration-200"
             >
-              Start Free Trial
+              Start free trial
             </a>
           </div>
 
@@ -54,12 +63,13 @@ export default function Navbar() {
         {mobileOpen && (
           <div className="md:hidden border-t border-gray-100 py-4 px-2 space-y-3 bg-white">
             <a href="#features" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 py-1">Product</a>
+            <a href="#how-it-works" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 py-1">Solutions</a>
             <a href="#features" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 py-1">Features</a>
             <a href="#dashboard" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 py-1">Pricing</a>
-            <a href="#benefits" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 py-1">About</a>
             <a href="#testimonials" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 py-1">Resources</a>
             <a href="#cta" onClick={() => setMobileOpen(false)} className="block text-sm font-medium text-gray-700 py-1">Blog</a>
-            <div className="pt-3 border-t border-gray-100">
+            <div className="pt-3 border-t border-gray-100 flex flex-col gap-2">
+              <a href="#cta" onClick={() => setMobileOpen(false)} className="text-center text-sm font-semibold text-gray-700 py-2">Log in</a>
               <a
                 href="#cta"
                 onClick={() => setMobileOpen(false)}

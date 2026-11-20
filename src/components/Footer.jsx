@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="bg-white border-t border-gray-100 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:gap-12 pb-14 border-b border-gray-100">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 lg:gap-12 pb-12 border-b border-gray-100">
           {/* Logo & Description */}
           <div className="col-span-2 space-y-4">
             <a href="#" className="flex items-center gap-2.5">
@@ -32,18 +32,20 @@ export default function Footer() {
                   <polyline points="12 6 12 12 16 14"/>
                 </svg>
               </div>
-              <span className="text-xl font-bold tracking-tight text-gray-950">Timeflow</span>
+              <span className="text-xl font-bold tracking-tight text-[#192852]">Timeflow</span>
             </a>
             <p className="text-sm text-gray-500 leading-relaxed max-w-sm">
               A little structure. A lot more flow.<br/>Time tracking for work that matters.
             </p>
-            <a className="text-xs font-semibold text-primary-600" href="mailto:hello@timeflow.example">hello@timeflow.example</a>
+            <a className="text-xs font-semibold text-primary-600 hover:text-primary-700 transition-colors" href="mailto:hello@timeflow.com">
+              hello@timeflow.com
+            </a>
           </div>
 
           {/* Links Columns */}
           {footerSections.map((section) => (
             <div key={section.title} className="col-span-1 space-y-3">
-              <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider">{section.title}</h4>
+              <h4 className="text-xs font-bold text-[#192852] uppercase tracking-wider">{section.title}</h4>
               <ul className="space-y-2.5">
                 {section.links.map((link) => (
                   <li key={link}>
