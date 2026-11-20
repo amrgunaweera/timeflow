@@ -67,22 +67,22 @@ export default function DashboardPreview() {
   return (
     <div className="relative mx-auto w-full rounded-2xl md:rounded-3xl bg-white shadow-[0_25px_80px_-15px_rgba(79,70,229,0.15)] border border-gray-200/90 overflow-hidden">
       {/* Top Window Bar */}
-      <div className="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-gray-100 bg-white">
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
-          <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
-          <div className="w-3 h-3 rounded-full bg-[#27C93F]"></div>
-          <span className="ml-3 text-xs font-medium text-gray-400 hidden sm:inline">timeflow.app/workspace/overview</span>
+      <div className="flex items-center justify-between px-3 sm:px-6 py-2.5 sm:py-3 border-b border-gray-100 bg-white">
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#FF5F56]"></div>
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#FFBD2E]"></div>
+          <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-[#27C93F]"></div>
+          <span className="ml-2 sm:ml-3 text-[11px] sm:text-xs font-medium text-gray-400 hidden sm:inline">timeflow.app/workspace/overview</span>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <div className="hidden sm:flex items-center gap-2 bg-gray-50 border border-gray-200/70 rounded-lg px-2.5 py-1 text-xs text-gray-500">
             <Search size={13} className="text-gray-400" />
             <span>Search or jump to...</span>
             <kbd className="text-[10px] bg-white border border-gray-200 px-1 rounded text-gray-400 font-mono">⌘K</kbd>
           </div>
-          <div className="w-7 h-7 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center relative cursor-pointer">
-            <Bell size={13} />
-            <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-primary-600 rounded-full"></span>
+          <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center relative cursor-pointer">
+            <Bell size={12} className="sm:w-3.5 sm:h-3.5" />
+            <span className="absolute top-1 right-1 w-1.5 h-1.5 bg-primary-600 rounded-full"></span>
           </div>
         </div>
       </div>
@@ -138,105 +138,105 @@ export default function DashboardPreview() {
         </aside>
 
         {/* Center Workspace Content */}
-        <div className="flex-1 p-5 sm:p-6 lg:p-7 space-y-5">
+        <div className="flex-1 p-3.5 sm:p-6 lg:p-7 space-y-4 sm:space-y-5">
           {/* Dashboard Header Bar */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3">
             <div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-[#192852] tracking-tight">
+              <h3 className="text-lg sm:text-2xl font-extrabold text-[#192852] tracking-tight">
                 A little focus. A lot of progress.
               </h3>
               <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
                 Here&apos;s how your team is spending their time today.
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <button className="flex items-center gap-2 bg-white border border-gray-200 rounded-xl px-3 py-1.5 text-xs font-semibold text-gray-700 shadow-2xs hover:bg-gray-50">
+            <div className="flex items-center gap-2 self-start sm:self-auto">
+              <button className="flex items-center gap-1.5 sm:gap-2 bg-white border border-gray-200 rounded-lg sm:rounded-xl px-2.5 sm:px-3 py-1 sm:py-1.5 text-xs font-semibold text-gray-700 shadow-2xs hover:bg-gray-50">
                 <span>This week</span>
-                <ChevronDown size={14} className="text-gray-400" />
+                <ChevronDown size={13} className="text-gray-400" />
               </button>
             </div>
           </div>
 
           {/* 4 Metric Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4">
             {/* Metric 1 */}
-            <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs">
-              <span className="text-[11px] font-semibold text-gray-400 tracking-wider">Tracked this week</span>
-              <p className="text-xl sm:text-2xl font-extrabold text-[#192852] mt-1">32h 40m</p>
-              <div className="flex items-center gap-1 mt-1 text-[11px] font-medium text-emerald-600">
-                <ArrowUpRight size={12} />
+            <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-gray-200/80 shadow-2xs">
+              <span className="text-[10px] sm:text-[11px] font-semibold text-gray-400 tracking-wider">Tracked this week</span>
+              <p className="text-lg sm:text-2xl font-extrabold text-[#192852] mt-0.5 sm:mt-1">32h 40m</p>
+              <div className="flex items-center gap-1 mt-0.5 sm:mt-1 text-[10px] sm:text-[11px] font-medium text-emerald-600">
+                <ArrowUpRight size={11} />
                 <span>+12% vs last week</span>
               </div>
             </div>
 
             {/* Metric 2 */}
-            <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs">
-              <span className="text-[11px] font-semibold text-gray-400 tracking-wider">Billable hours</span>
-              <p className="text-xl sm:text-2xl font-extrabold text-[#192852] mt-1">26h 15m</p>
-              <div className="flex items-center gap-1 mt-1 text-[11px] font-medium text-primary-600">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-gray-200/80 shadow-2xs">
+              <span className="text-[10px] sm:text-[11px] font-semibold text-gray-400 tracking-wider">Billable hours</span>
+              <p className="text-lg sm:text-2xl font-extrabold text-[#192852] mt-0.5 sm:mt-1">26h 15m</p>
+              <div className="flex items-center gap-1 mt-0.5 sm:mt-1 text-[10px] sm:text-[11px] font-medium text-primary-600">
                 <span>82% of total hours</span>
               </div>
             </div>
 
             {/* Metric 3 */}
-            <div className="bg-white rounded-2xl p-4 border border-gray-200/80 shadow-2xs">
-              <span className="text-[11px] font-semibold text-gray-400 tracking-wider">Project progress</span>
-              <p className="text-xl sm:text-2xl font-extrabold text-[#192852] mt-1">74%</p>
-              <div className="flex items-center gap-1 mt-1 text-[11px] font-medium text-emerald-600">
-                <ArrowUpRight size={12} />
+            <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-gray-200/80 shadow-2xs">
+              <span className="text-[10px] sm:text-[11px] font-semibold text-gray-400 tracking-wider">Project progress</span>
+              <p className="text-lg sm:text-2xl font-extrabold text-[#192852] mt-0.5 sm:mt-1">74%</p>
+              <div className="flex items-center gap-1 mt-0.5 sm:mt-1 text-[10px] sm:text-[11px] font-medium text-emerald-600">
+                <ArrowUpRight size={11} />
                 <span>+4% this week</span>
               </div>
             </div>
 
             {/* Metric 4: Solid Purple Timer Card */}
-            <div className="bg-primary-600 rounded-2xl p-4 text-white shadow-lg shadow-primary-600/25 relative overflow-hidden flex flex-col justify-between">
+            <div className="bg-primary-600 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-white shadow-lg shadow-primary-600/25 relative overflow-hidden flex flex-col justify-between">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-medium text-primary-100 uppercase tracking-wider">
+                <span className="text-[9px] sm:text-[11px] font-medium text-primary-100 uppercase tracking-wider">
                   ● TIMER RUNNING
                 </span>
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
-                  className="w-7 h-7 rounded-full bg-white text-primary-600 hover:bg-primary-50 flex items-center justify-center shadow-sm transition-all cursor-pointer"
+                  className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white text-primary-600 hover:bg-primary-50 flex items-center justify-center shadow-sm transition-all cursor-pointer shrink-0"
                   title={isPlaying ? 'Pause' : 'Resume'}
                 >
-                  {isPlaying ? <span className="block w-2.5 h-2.5 rounded-[2px] bg-primary-600" /> : <Play size={12} fill="currentColor" />}
+                  {isPlaying ? <span className="block w-2 h-2 rounded-[2px] bg-primary-600" /> : <Play size={10} fill="currentColor" />}
                 </button>
               </div>
-              <div className="mt-2">
-                <p className="text-2xl sm:text-3xl font-extrabold tracking-tight">{formatTimer(seconds)}</p>
-                <div className="flex items-center justify-between mt-1 text-[10px] text-primary-100">
-                  <span>Website redesign · Design</span>
+              <div className="mt-1.5 sm:mt-2">
+                <p className="text-xl sm:text-3xl font-extrabold tracking-tight font-mono">{formatTimer(seconds)}</p>
+                <div className="flex items-center justify-between mt-0.5 text-[9px] sm:text-[10px] text-primary-100 truncate">
+                  <span className="truncate">Website redesign · Design</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Middle Row: Weekly Overview Chart + Category Breakdown */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3.5 sm:gap-4">
             {/* Weekly Bar Chart */}
-            <div className="lg:col-span-2 bg-white rounded-2xl p-5 border border-gray-200/80 shadow-2xs">
-              <div className="flex items-center justify-between mb-4">
+            <div className="lg:col-span-2 bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-gray-200/80 shadow-2xs">
+              <div className="flex items-center justify-between mb-3 sm:mb-4">
                 <div>
                   <h4 className="text-xs sm:text-sm font-bold text-[#192852]">Your week, at a glance</h4>
-                  <p className="text-[11px] text-gray-400">Tracked hours</p>
+                  <p className="text-[10px] sm:text-[11px] text-gray-400">Tracked hours</p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-primary-600"></span>
-                    <span className="text-[11px] text-gray-500 font-medium">Billable</span>
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <div className="flex items-center gap-1 sm:gap-1.5">
+                    <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-primary-600"></span>
+                    <span className="text-[10px] sm:text-[11px] text-gray-500 font-medium">Billable</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-primary-200"></span>
-                    <span className="text-[11px] text-gray-500 font-medium">Non-billable</span>
+                  <div className="flex items-center gap-1 sm:gap-1.5">
+                    <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-primary-200"></span>
+                    <span className="text-[10px] sm:text-[11px] text-gray-500 font-medium">Non-billable</span>
                   </div>
                 </div>
               </div>
 
               {/* Stacked Pillars */}
-              <div className="h-40 flex items-end justify-between gap-2 sm:gap-3.5 pt-4 pb-2 px-1 border-b border-gray-100">
+              <div className="h-36 sm:h-40 flex items-end justify-between gap-1 sm:gap-3.5 pt-3 sm:pt-4 pb-2 px-1 border-b border-gray-100">
                 {days.map((item) => (
                   <div key={item.name} className="flex-1 flex flex-col items-center h-full justify-end group">
-                    <div className="w-full max-w-[34px] flex flex-col items-center gap-0.5 relative">
+                    <div className="w-full max-w-[28px] sm:max-w-[34px] flex flex-col items-center gap-0.5 relative">
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-8 bg-gray-900 text-white text-[10px] px-2 py-0.5 rounded shadow pointer-events-none whitespace-nowrap z-20">
                         {item.hrs}
                       </div>
@@ -249,25 +249,25 @@ export default function DashboardPreview() {
                         style={{ height: `${item.billable}px` }}
                       ></div>
                     </div>
-                    <span className="text-[11px] font-semibold text-gray-400 mt-2">{item.name}</span>
+                    <span className="text-[10px] sm:text-[11px] font-semibold text-gray-400 mt-2">{item.name}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center justify-between pt-3 text-[11px] text-gray-400">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pt-2.5 sm:pt-3 text-[10px] sm:text-[11px] text-gray-400">
                 <span>Daily average: 7.4 hrs</span>
                 <span className="text-primary-600 font-semibold">Weekly Target: 40 hrs (94% achieved)</span>
               </div>
             </div>
 
             {/* Time by Category Progress */}
-            <div className="bg-white rounded-2xl p-5 border border-gray-200/80 shadow-2xs flex flex-col justify-between">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-gray-200/80 shadow-2xs flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
                   <h4 className="text-xs sm:text-sm font-bold text-[#192852]">Where your time goes</h4>
                 </div>
 
-                <div className="space-y-3.5">
+                <div className="space-y-3 sm:space-y-3.5">
                   {categories.map((cat) => (
                     <div key={cat.name} className="space-y-1">
                       <div className="flex items-center justify-between text-xs">
@@ -293,23 +293,23 @@ export default function DashboardPreview() {
           </div>
 
           {/* Bottom Row inside Dashboard: Recent Activity + Team */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3.5 sm:gap-4">
             {/* Recent Activity List */}
-            <div className="lg:col-span-2 bg-white rounded-2xl p-4 sm:p-5 border border-gray-200/80 shadow-2xs">
+            <div className="lg:col-span-2 bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-gray-200/80 shadow-2xs">
               <div className="flex items-center justify-between mb-3">
                 <h4 className="text-xs sm:text-sm font-bold text-[#192852]">Recent Timesheet Entries</h4>
                 <span className="text-[11px] font-semibold text-primary-600 cursor-pointer hover:underline">View All</span>
               </div>
               <div className="divide-y divide-gray-100">
                 {recentActivities.map((act) => (
-                  <div key={act.task} className="py-2.5 flex items-center justify-between text-xs">
-                    <div>
-                      <p className="font-semibold text-gray-900">{act.task}</p>
-                      <p className="text-[11px] text-gray-400">{act.project}</p>
+                  <div key={act.task} className="py-2 sm:py-2.5 flex items-center justify-between gap-2 text-xs">
+                    <div className="min-w-0">
+                      <p className="font-semibold text-gray-900 truncate">{act.task}</p>
+                      <p className="text-[10px] sm:text-[11px] text-gray-400 truncate">{act.project}</p>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono font-semibold text-gray-800">{act.time}</span>
-                      <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                    <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+                      <span className="font-mono font-semibold text-gray-800 text-[11px] sm:text-xs">{act.time}</span>
+                      <span className="text-[9px] sm:text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">
                         {act.status}
                       </span>
                     </div>
@@ -319,12 +319,12 @@ export default function DashboardPreview() {
             </div>
 
             {/* Team Members Status */}
-            <div className="bg-white rounded-2xl p-4 sm:p-5 border border-gray-200/80 shadow-2xs">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 border border-gray-200/80 shadow-2xs">
               <div className="flex items-center justify-between mb-3">
                 <h4 className="text-xs sm:text-sm font-bold text-[#192852]">Team Status</h4>
                 <span className="text-[11px] text-emerald-600 font-semibold">4 active now</span>
               </div>
-              <div className="space-y-3">
+              <div className="space-y-2.5 sm:space-y-3">
                 {team.map((member) => (
                   <div key={member.name} className="flex items-center justify-between text-xs">
                     <div className="flex items-center gap-2">
