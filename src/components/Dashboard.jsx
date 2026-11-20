@@ -17,6 +17,7 @@ import {
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('timesheets')
+  const [selectedBottomTab, setSelectedBottomTab] = useState('Summary')
   const [isPlaying, setIsPlaying] = useState(true)
   const [seconds, setSeconds] = useState(6138)
 
@@ -97,11 +98,10 @@ export default function Dashboard() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 sm:px-5 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer whitespace-nowrap ${
-                activeTab === tab.id
+              className={`px-4 sm:px-5 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer whitespace-nowrap ${activeTab === tab.id
                   ? 'bg-white text-gray-900 shadow-md'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -133,8 +133,8 @@ export default function Dashboard() {
                 <div className="flex items-center gap-2.5 px-2 py-2 mb-6">
                   <div className="w-7 h-7 rounded-lg bg-primary-600 flex items-center justify-center text-white">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10"/>
-                      <polyline points="12 6 12 12 16 14"/>
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
                     </svg>
                   </div>
                   <div>
@@ -153,11 +153,10 @@ export default function Dashboard() {
                   ].map((item) => (
                     <button
                       key={item.name}
-                      className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-medium transition-all ${
-                        item.active
+                      className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-medium transition-all ${item.active
                           ? 'bg-primary-50 text-primary-600 font-semibold'
                           : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'
-                      }`}
+                        }`}
                     >
                       <item.icon size={15} />
                       <span>{item.name}</span>
@@ -356,20 +355,22 @@ export default function Dashboard() {
                 </div>
               </div>
 
-              {/* Bottom Tab Bar (horizontally scrollable on mobile) */}
+              {/* Bottom Tab Bar (interactive & horizontally scrollable on mobile) */}
               <div className="flex items-center justify-start sm:justify-center gap-1 bg-gray-100/80 rounded-xl p-1 border border-gray-200/60 overflow-x-auto max-w-full">
-                {bottomTabs.map((tab, i) => (
-                  <button
-                    key={tab}
-                    className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap shrink-0 ${
-                      i === 0
-                        ? 'bg-white text-[#192852] shadow-xs'
-                        : 'text-gray-500 hover:text-gray-800'
-                    }`}
-                  >
-                    {tab}
-                  </button>
-                ))}
+                  {
+                    bottomTabs.map((tab) => (
+                      <button
+                        key={tab}
+                    onClick={() => setSelectedBottomTab(tab)}
+                        className={`px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-lg text-xs font-semibold transition-all whitespace-nowrap shrink-0 cursor-pointer ${selectedBottomTab === tab
+                            ? 'bg-white text-[#192852] shadow-xs'
+                            : 'text-gray-500 hover:text-gray-800'
+                          }`}
+                      >
+                        {tab}
+                      </button>
+                    ))
+                  }
               </div>
             </div>
           </div>
